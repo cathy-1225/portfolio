@@ -1,44 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #f4f5f7;
+  color: #2c2c2c;
+  line-height: 1.6;
 }
 
+/* Header with gradient and rounded bottom */
 header {
-  background-color: #3f51b5;
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
   color: white;
-  padding: 2em;
+  padding: 3em 1em 2em;
   text-align: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
+header h1 {
+  margin: 0 0 0.25em;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Project section */
 .projects {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1em;
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 0 1.5em;
 }
 
+.projects h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1em;
+  border-left: 4px solid #3f51b5;
+  padding-left: 0.5em;
+  color: #3f51b5;
+}
+
+/* Project cards with AOS animation */
 .project {
   background-color: white;
-  padding: 1em;
-  margin-bottom: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Project title */
 .project h3 {
   margin-top: 0;
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 1em;
 }
 
-.project a {
+/* Layout for image and description */
+.project-body {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Thumbnail image */
+.project-thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.02);
+}
+
+/* Text content beside the image */
+.project-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.project-text p {
+  margin: 0.5em 0 1em;
+}
+
+.project-text a {
   color: #3f51b5;
   text-decoration: none;
+  font-weight: 600;
 }
 
+.project-text a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 1em;
-  background-color: #eee;
-  margin-top: 3em;
+  padding: 2em;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4em;
+  border-top: 1px solid #ccc;
+}
+
+/* AOS fade-up custom easing */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill Tags */
+.tags {
+  margin-top: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.tags span {
+  background-color: #3f51b5;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
