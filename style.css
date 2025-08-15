@@ -152,3 +152,29 @@ footer {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+/* Featured Projects highlight */
+.featured {
+  border: 2px solid #3f51b5;
+  box-shadow: 0 8px 24px rgba(63, 81, 181, 0.15);
+}
+
+/* Practice Works section */
+.practice-section {
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 12px;
+}
+
+.practice-section .project {
+  background-color: #fafafa;
+}
+
+/* Practice Works heading */
+.practice-heading {
+  font-size: 1.2rem;
+  color: #666;
+  border-left: 4px solid #ccc;
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+}
